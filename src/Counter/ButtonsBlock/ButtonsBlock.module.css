@@ -1,0 +1,9 @@
+.buttonsBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 6px solid rgba(42, 189, 255, 0.78);
+    border-radius: 10px;
+    height: 35%;
+    width: 90%;
+}

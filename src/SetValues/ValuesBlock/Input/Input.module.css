@@ -1,0 +1,31 @@
+
+.input{
+    width: 50%;
+    height: 30px;
+    padding: 0px 10px;
+    border-radius: 15px;
+    outline: none;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.description{
+    color: rgba(42, 189, 255, 0.78);
+    font-size: 25px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.notError {
+    background-color: #B289A5;
+    border: 3px solid rgba(42, 189, 255, 0.78);
+}
+
+.error {
+    background-color: #fd5b57;
+    border: 3px solid rgb(255, 0, 1);
+}

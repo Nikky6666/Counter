@@ -1,0 +1,27 @@
+.button{
+    min-width: 100px;
+    height: 40px;
+    background-color: #b289a5;
+    border-radius: 20px;
+    border: 3px solid rgba(42, 189, 255, 0.78);
+    font-size: 25px;
+    outline: none;
+}
+
+.notDisabled{
+    color: #fff9ff;
+}
+
+.disabled{
+    color: #4f4f4f;
+}
+
+.mouseDown{
+    background-color: #42313a;
+    color: #ffb2df
+}
+
+.mouseUp{
+    background-color: #b289a5;
+    color: white;
+}
