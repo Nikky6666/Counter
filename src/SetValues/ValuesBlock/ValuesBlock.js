@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from './ValuesBlock.module.css';
 import Input from "./Input/Input";
 import {connect} from "react-redux";
@@ -6,6 +6,13 @@ import {connect} from "react-redux";
 
 const ValuesBlock = (props) => {
 
+    useEffect(()=>{
+        const commonError = checkCoallision(props.minValue.number, props.maxValue.number);
+        if(commonError) {
+            props.setMaxValueError(true);
+            props.setMinValueError(true);
+        }
+    },[props.maxValue.number, props.minValue.number])
 
     const checkOnError = (number) => {
         if (number >= 0 && number % 1 === 0 && !isNaN(number)) {
@@ -15,61 +22,59 @@ const ValuesBlock = (props) => {
     };
 
     const checkCoallision = (minValue, maxValue) => {
-        debugger;
-        if(maxValue===minValue || maxValue<minValue)return true;
+        if (maxValue === minValue || maxValue < minValue) return true;
         return false;
     };
 
-    const changeMaxValue = (e) => {
+
+    const changeValue = (e, setError, setValue) =>{
         const newNumber = Number(e.target.value);
-        const error = checkOnError(newNumber);
-        if(checkCoallision(props.minValue.number, newNumber))
-            props.setValues(props.minValue.number,true,newNumber,true, true);
-        else if(error) props.setValues(props.minValue.number,false, newNumber,true, true);
-        else {
-            props.setValues(props.minValue.number,false,newNumber,false, false)}
+        setError(checkOnError(newNumber));
+        setValue(newNumber);
     };
 
-    const changeStartValue = (e) => {
-        const newNumber = Number(e.target.value);
-        const error = checkOnError(newNumber);
-        if(checkCoallision(newNumber, props.maxValue.number))
-            props.setValues(newNumber, true, props.maxValue.number, true, true);
-        else if(error) props.setValues(newNumber,true, props.maxValue.number,false, true);
-        else {
-        /*    debugger;*/
-            props.setValues(newNumber, false, props.maxValue.number, false, false)
-        }
+    const onChangeMaxValue = (e) => {
+        changeValue(e, props.setMaxValueError, props.setMaxValue);
+        props.setMinValueError(false);
+    };
+    const onChangeStartValue = (e) => {
+        changeValue(e, props.setMinValueError, props.setMinValue);
+        props.setMaxValueError(false)
     };
 
 
     return (
         <div className={s.container}>
             <Input description="max value"
-                   callbackFunk={changeMaxValue} value={props.maxValue}/>
-            <Input description="start value" callbackFunk={changeStartValue} value={props.minValue}/>
+                   callbackFunk={onChangeMaxValue} value={props.maxValue}/>
+            <Input description="start value" callbackFunk={onChangeStartValue} value={props.minValue}/>
         </div>
     );
 };
 
-
 const mapStateToProps = (state) => {
     return {
         maxValue: state.maxValue,
-        minValue:  state.minValue,
+        minValue: state.minValue,
     }
 };
 
-const mapDispatchToProps = (dispatch) =>{
+const mapDispatchToProps = (dispatch) => {
     return {
-        setValues: (minValueNumber, minValueError, maxValueNumber, maxValueError, isDisableSet) => {
-            const action = {type: "SET_INPUT_VALUES",
-                newValues: {
-                    maxValue: {error: maxValueError, number: maxValueNumber},
-                    minValue: {error: minValueError, number: minValueNumber},
-                    isDisableSet
-                }
-            };
+        setMaxValueError: (error)=>{
+            const action = {type: "SET_MAX_VALUE_ERROR", error};
+            dispatch(action);
+        },
+        setMaxValue: (number) =>{
+            const action = {type: "SET_MAX_VALUE", number};
+            dispatch(action);
+        },
+        setMinValueError: (error)=>{
+            const action = {type: "SET_MIN_VALUE_ERROR", error};
+            dispatch(action);
+        },
+        setMinValue: (number)=>{
+            const action = {type: "SET_MIN_VALUE", number};
             dispatch(action);
         }
     }

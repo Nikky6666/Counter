@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea53b79f-51b9-4675-ab40-7d49fa7b3d6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/ButtonsBlock/ButtonsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/ButtonsBlock/ButtonsBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Counter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/DisplayingCount/DisplayingCount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/DisplayingCount/DisplayingCount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SetValues/ButtonsBlock/ButtonsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetValues/ButtonsBlock/ButtonsBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SetValues/SetValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetValues/SetValues.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SetValues/ValuesBlock/ValuesBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetValues/ValuesBlock/ValuesBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +104,8 @@
       <workItem from="1575489179276" duration="599000" />
       <workItem from="1575703625444" duration="8090000" />
       <workItem from="1576180615459" duration="184000" />
-      <workItem from="1577351794034" duration="13488000" />
+      <workItem from="1577351794034" duration="13807000" />
+      <workItem from="1577397342953" duration="2855000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1577351962177</created>
@@ -121,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577351962177</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added redux, react-redux">
+      <created>1577372722254</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577372722254</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +142,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Added redux, react-redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added redux, react-redux" />
   </component>
 </project>

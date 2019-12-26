@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Counter from "./Counter/Counter";
 import SetValues from "./SetValues/SetValues";
-import {connect} from "react-redux";
 
 class App extends React.Component {/*
 
