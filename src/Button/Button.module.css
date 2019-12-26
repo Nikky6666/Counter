@@ -13,7 +13,8 @@
 }
 
 .disabled{
-    color: #4f4f4f;
+    color: #636363;
+    background-color: #42313a;
 }
 
 .mouseDown{

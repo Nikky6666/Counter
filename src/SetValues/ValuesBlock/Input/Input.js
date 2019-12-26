@@ -8,7 +8,7 @@ class Input extends React.Component {
         const isRightInput = this.props.value.error ? false : true;
         return (
                 <div className={s.container}>
-                    <span className={s.description}>{this.props.value.name}</span>
+                    <span className={s.description}>{this.props.description}</span>
                     <input type='number'
                            className={isRightInput ? `${s.input} ${s.notError}` : `${s.input} ${s.error}`}
                            value={this.props.value.number}

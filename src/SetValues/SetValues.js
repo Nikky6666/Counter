@@ -9,7 +9,8 @@ class SetValues extends React.Component {
     render() {
         return (
                 <div className={s.container}>
-                    <ValuesBlock inputValues={this.props.inputValues}
+                    <ValuesBlock maxValue={this.props.maxValue}
+                                 minValue={this.props.minValue}
                                  changeMaxValue={this.props.changeMaxValue}
                                  changeStartValue={this.props.changeStartValue}
                     />

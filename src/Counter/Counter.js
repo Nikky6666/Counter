@@ -8,7 +8,9 @@ class Counter extends React.Component {
     render() {
         return (
                 <div className={s.container}>
-                    <DisplayingCount count={this.props.count} maxNumber={this.props.maxNumber}/>
+                    <DisplayingCount message={this.props.isDisableInc&&this.props.isDisableReset ?
+                    "enter values and press set":null}
+                                     count={this.props.count} maxNumber={this.props.maxNumber}/>
                     <ButtonsBlock increment={this.props.increment}
                                   reset={this.props.reset}
                                   isDisableInc={this.props.isDisableInc}

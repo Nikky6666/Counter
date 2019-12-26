@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea53b79f-51b9-4675-ab40-7d49fa7b3d6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button/Button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Counter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/DisplayingCount/DisplayingCount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/DisplayingCount/DisplayingCount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/DisplayingCount/DisplayingCount.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/DisplayingCount/DisplayingCount.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SetValues/SetValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetValues/SetValues.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SetValues/ValuesBlock/Input/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetValues/ValuesBlock/Input/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SetValues/ValuesBlock/ValuesBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetValues/ValuesBlock/ValuesBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web_site/Web-site" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -101,6 +107,10 @@
       <workItem from="1575185305405" duration="5000" />
       <workItem from="1575305965207" duration="5186000" />
       <workItem from="1575369006516" duration="40000" />
+      <workItem from="1575372893793" duration="614000" />
+      <workItem from="1575489179276" duration="599000" />
+      <workItem from="1575703625444" duration="8090000" />
+      <workItem from="1576180615459" duration="184000" />
     </task>
     <servers />
   </component>
