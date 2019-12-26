@@ -4,22 +4,13 @@ import ValuesBlock from "./ValuesBlock/ValuesBlock";
 import ButtonsBlock from "./ButtonsBlock/ButtonsBlock";
 
 
-class SetValues extends React.Component {
-
-    render() {
-        return (
-                <div className={s.container}>
-                    <ValuesBlock maxValue={this.props.maxValue}
-                                 minValue={this.props.minValue}
-                                 changeMaxValue={this.props.changeMaxValue}
-                                 changeStartValue={this.props.changeStartValue}
-                    />
-                    <ButtonsBlock isDisableSet={this.props.isDisableSet}
-                                  SetValues={this.props.SetValues}
-                    />
-                </div>
-        );
-    }
-}
+const SetValues = () => {
+    return (
+        <div className={s.container}>
+            <ValuesBlock/>
+            <ButtonsBlock/>
+        </div>
+    );
+};
 
 export default SetValues;

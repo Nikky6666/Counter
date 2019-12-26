@@ -2,23 +2,27 @@ import React from 'react';
 import s from '../CommonStyles/Block.module.css';
 import DisplayingCount from "./DisplayingCount/DisplayingCount";
 import ButtonsBlock from "./ButtonsBlock/ButtonsBlock";
+import {connect} from "react-redux";
 
-class Counter extends React.Component {
+const Counter = (props) => {
+    return (
+        <div className={s.container}>
+            <DisplayingCount message={props.isDisableInc && props.isDisableRes ?
+                "enter values and press set" : null}/>
+            <ButtonsBlock isDisableInc={props.isDisableInc} isDisableReset={props.isDisableRes} />
+        </div>
+    );
+};
 
-    render() {
-        return (
-                <div className={s.container}>
-                    <DisplayingCount message={this.props.isDisableInc&&this.props.isDisableReset ?
-                    "enter values and press set":null}
-                                     count={this.props.count} maxNumber={this.props.maxNumber}/>
-                    <ButtonsBlock increment={this.props.increment}
-                                  reset={this.props.reset}
-                                  isDisableInc={this.props.isDisableInc}
-                                  isDisableReset={this.props.isDisableReset}
-                    />
-                </div>
-        );
+
+const mapStateToProps = (state) => {
+    return {
+        isDisableInc: state.isDisableInc,
+        isDisableRes: state.isDisableRes,
     }
-}
+};
 
-export default Counter;
+const connectedCounter = connect(mapStateToProps, null)(Counter);
+
+
+export default connectedCounter;

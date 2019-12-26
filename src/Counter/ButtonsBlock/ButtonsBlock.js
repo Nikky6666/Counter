@@ -1,18 +1,32 @@
 import React from 'react';
 import s from './ButtonsBlock.module.css'
 import Button from "../../Button/Button";
+import {connect} from "react-redux";
 
 
-class ButtonsBlock extends React.Component {
+const ButtonsBlock = (props) => {
+    return (
+        <div className={s.buttonsBlock}>
+            <Button onClickFunction={props.increment} title="inc" isDisabled={props.isDisableInc}/>
+            <Button onClickFunction={props.reset} title="reset" isDisabled={props.isDisableReset}/>
+        </div>
+    )
+};
 
-    render() {
-        return (
-            <div className={s.buttonsBlock}>
-                <Button onClickFunction={this.props.increment} title="inc" isDisabled={this.props.isDisableInc}/>
-                <Button onClickFunction={this.props.reset} title="reset" isDisabled={this.props.isDisableReset}/>
-            </div>
-        )
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        increment: () => {
+            const action = {type: "INCREMENT"};
+            dispatch(action);
+        },
+        reset: () => {
+            const action = {type: "RESET"};
+            dispatch(action);
+        }
     }
 };
 
-export default ButtonsBlock;
+const connectedValuesBlock = connect(null, mapDispatchToProps)(ButtonsBlock);
+
+
+export default connectedValuesBlock;
