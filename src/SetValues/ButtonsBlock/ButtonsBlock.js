@@ -2,15 +2,15 @@ import React from 'react';
 import s from './ButtonsBlock.module.css'
 import Button from "../../Button/Button";
 import {connect} from "react-redux";
-
+import {setValues} from "../../redux/reduser";
 
 const ButtonsBlock = (props) => {
     return (
         <div className={s.container}>
-            <Button onClickFunction={props.SetValues} isDisabled={props.isDisabled} title='set'/>
+            <Button onClickFunction={props.setValues} isDisabled={props.isDisabled} title='set'/>
         </div>
     );
-}
+};
 
 
 const mapStateToProps = (state) => {
@@ -19,16 +19,7 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch) =>{
-    return {
-        SetValues: () => {
-            const action = {type: "SET_VALUES"};
-            dispatch(action);
-        }
-    }
-};
-
-const connectedButtonsBlock = connect(mapStateToProps, mapDispatchToProps)(ButtonsBlock)
+const connectedButtonsBlock = connect(mapStateToProps, {setValues})(ButtonsBlock);
 
 
 export default connectedButtonsBlock;

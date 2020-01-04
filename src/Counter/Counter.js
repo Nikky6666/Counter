@@ -9,7 +9,7 @@ const Counter = (props) => {
         <div className={s.container}>
             <DisplayingCount message={props.isDisableInc && props.isDisableRes ?
                 "enter values and press set" : null}/>
-            <ButtonsBlock isDisableInc={props.isDisableInc} isDisableReset={props.isDisableRes} />
+            <ButtonsBlock isDisableInc={props.isDisableInc} isDisableRes={props.isDisableRes} />
         </div>
     );
 };
@@ -23,6 +23,5 @@ const mapStateToProps = (state) => {
 };
 
 const connectedCounter = connect(mapStateToProps, null)(Counter);
-
 
 export default connectedCounter;

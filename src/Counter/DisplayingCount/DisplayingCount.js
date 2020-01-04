@@ -22,19 +22,7 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch) =>{
-    return {
-        changeMaxValue: (number) => {
-            const action = {type: "CHANGE_MAX_VALUE", number};
-            dispatch(action);
-        },
-        changeStartValue: (number) => {
-            const action = {type: "CHANGE_MIN_VALUE", number};
-            dispatch(action);
-        }
-    }
-};
 
-const connectedDisplayingCount = connect(mapStateToProps, mapDispatchToProps)(DisplayingCount);
+const connectedDisplayingCount = connect(mapStateToProps, null)(DisplayingCount);
 
 export default connectedDisplayingCount;

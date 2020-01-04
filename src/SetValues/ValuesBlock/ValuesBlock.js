@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import s from './ValuesBlock.module.css';
 import Input from "./Input/Input";
 import {connect} from "react-redux";
+import {setMaxValue, setMaxValueError, setMinValue, setMinValueError} from "../../redux/reduser";
 
 
 const ValuesBlock = (props) => {
@@ -59,27 +60,12 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        setMaxValueError: (error)=>{
-            const action = {type: "SET_MAX_VALUE_ERROR", error};
-            dispatch(action);
-        },
-        setMaxValue: (number) =>{
-            const action = {type: "SET_MAX_VALUE", number};
-            dispatch(action);
-        },
-        setMinValueError: (error)=>{
-            const action = {type: "SET_MIN_VALUE_ERROR", error};
-            dispatch(action);
-        },
-        setMinValue: (number)=>{
-            const action = {type: "SET_MIN_VALUE", number};
-            dispatch(action);
-        }
-    }
-};
-
-const connectedValuesBlock = connect(mapStateToProps, mapDispatchToProps)(ValuesBlock);
+const connectedValuesBlock = connect(mapStateToProps,
+    {
+        setMaxValueError,
+        setMaxValue,
+        setMinValueError,
+        setMinValue
+    })(ValuesBlock);
 
 export default connectedValuesBlock;
